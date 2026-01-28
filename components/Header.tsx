@@ -18,7 +18,7 @@ const Header: React.FC = () => {
           Inventory of Works for Automation
         </p>
         <p className="text-[11px] font-mono text-black font-black uppercase tracking-tighter leading-tight">
-          Issue Date: 01/28/2026
+          01/28/2026
         </p>
       </div>
     </header>
