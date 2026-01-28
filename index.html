@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AWD | Automation Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --a4-width: 210mm;
+    }
+    
+    html, body {
+      margin: 0;
+      padding: 0;
+      background-color: #0d0d0d;
+      overflow-y: auto !important;
+      height: auto !important;
+      min-height: 100%;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #333;
+    }
+
+    .a4-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 0;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    .a4-container {
+      width: var(--a4-width);
+      min-height: 297mm;
+      padding: 20mm;
+      background: #ffffff;
+      box-shadow: 0 40px 120px rgba(0,0,0,1);
+      position: relative;
+      margin-bottom: 60px;
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease;
+    }
+
+    @media (max-width: 215mm) {
+      .a4-container {
+        width: 100%;
+        min-height: 100vh;
+        padding: 8mm;
+        box-shadow: none;
+        margin-bottom: 0;
+      }
+      .a4-wrapper {
+        padding: 0;
+      }
+    }
+
+    @media print {
+      body { background: none; }
+      .a4-wrapper { padding: 0; display: block; }
+      .a4-container { margin: 0; box-shadow: none; width: 210mm; height: 297mm; padding: 20mm; }
+      .no-print { display: none; }
+    }
+
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0d0d0d;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2563eb;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #1d4ed8;
+    }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0"
+  }
+}
+</script>
+</head>
+<body>
+  <div id="root"></div>
+</body>
+</html>
